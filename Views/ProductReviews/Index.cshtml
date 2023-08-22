@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SampleAppDemo.Models.ProductReview>
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "Product Reviews";
+}
+
+<h2>Index: Product Reviews</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReviewText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReviewDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.ProductName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReviewText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReviewDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.ProductName)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })*@
+
+                    @if (User.Identity.GetUserName() == "admin@infodesk.com")
+                    {
+                        <a href="@Url.Action("Edit", new { id = item.ReviewID })"><i class="fa fa-edit"></i></a>
+                        @: |
+                        <a href="@Url.Action("Details", new { id = item.ReviewID })"><i class="fa fa-info-circle"></i></a>
+                        @: |
+                        <a href="@Url.Action("Delete", new { id = item.ReviewID })"><i class="fa fa-trash red"></i></a>
+
+                    }
+                    else if (User.Identity.GetUserName() == "user@infodesk.com")
+                    {
+                        <a href="@Url.Action("Details", new { id = item.ReviewID })"><i class="fa fa-info-circle"></i></a>
+
+                    }
+                    else
+                    {
+
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

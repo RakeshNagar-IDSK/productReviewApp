@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReviewApp", "ProductReviewApp.csproj", "{ABDDDB84-5D56-4FF6-917A-AC4ADBDC3B43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductReviewApp.Tests", "ProductReviewApp.Tests\ProductReviewApp.Tests.csproj", "{9E6A3F70-3463-4840-BA22-30DE48EE0A93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABDDDB84-5D56-4FF6-917A-AC4ADBDC3B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDDDB84-5D56-4FF6-917A-AC4ADBDC3B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDDDB84-5D56-4FF6-917A-AC4ADBDC3B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDDDB84-5D56-4FF6-917A-AC4ADBDC3B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6A3F70-3463-4840-BA22-30DE48EE0A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6A3F70-3463-4840-BA22-30DE48EE0A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6A3F70-3463-4840-BA22-30DE48EE0A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6A3F70-3463-4840-BA22-30DE48EE0A93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F8EF023-D93D-4011-B471-FEEFD75DFE36}
+	EndGlobalSection
+EndGlobal

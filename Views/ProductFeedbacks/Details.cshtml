@@ -1,0 +1,58 @@
+﻿@model SampleAppDemo.Models.ProductFeedback
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProductFeedback</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RatingType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RatingType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductReview)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductReview)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductFeedback1.RatingType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductFeedback1.RatingType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductFeedback2.RatingType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductFeedback2.RatingType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RatingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
